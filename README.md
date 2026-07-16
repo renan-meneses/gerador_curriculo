@@ -187,7 +187,3 @@ curriculo_gerador/
 - No resume data used for AI training without consent
 - Sensitive data redacted from logs
 - Encryption in transit (TLS) and at rest
-
-## License
-
-MIT
