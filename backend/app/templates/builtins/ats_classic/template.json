@@ -1,0 +1,14 @@
+{
+  "name": "ATS Classic",
+  "version": "1.0.0",
+  "author": "Resume Builder",
+  "description": "Clean, ATS-optimized resume template with simple layout and keyword-friendly structure",
+  "supportedSections": [
+    "personalInformation", "summary", "experience", "education",
+    "skills", "certifications", "projects", "languages"
+  ],
+  "pageSize": "A4",
+  "fonts": ["Inter", "Arial", "Helvetica"],
+  "variables": {},
+  "category": "ats"
+}

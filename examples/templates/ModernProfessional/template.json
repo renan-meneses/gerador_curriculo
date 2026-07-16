@@ -1,0 +1,26 @@
+{
+  "name": "Modern Professional",
+  "version": "1.0.0",
+  "author": "Resume Builder",
+  "description": "A clean two-column resume template with sidebar for contact and skills. Optimized for both ATS and human readers.",
+  "supportedSections": [
+    "personalInformation",
+    "summary",
+    "experience",
+    "education",
+    "skills",
+    "certifications",
+    "projects",
+    "languages"
+  ],
+  "pageSize": "A4",
+  "fonts": ["Inter", "Segoe UI", "Arial"],
+  "variables": {
+    "primaryColor": "#2563eb",
+    "sidebarBg": "#1e293b",
+    "sidebarText": "#e2e8f0"
+  },
+  "entryFile": "template.html",
+  "styleFile": "styles.css",
+  "category": "professional"
+}

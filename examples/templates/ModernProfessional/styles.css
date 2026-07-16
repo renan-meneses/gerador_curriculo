@@ -1,0 +1,25 @@
+@page { size: A4; margin: 0; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', 'Segoe UI', Arial, sans-serif; font-size: 10pt; line-height: 1.5; color: #333; }
+.resume { display: flex; min-height: 297mm; }
+.sidebar { width: 34%; background: #1e293b; color: #e2e8f0; padding: 28px 20px; }
+.profile { margin-bottom: 24px; }
+.profile h1 { font-size: 20pt; color: #fff; line-height: 1.2; margin-bottom: 4px; }
+.profile .title { font-size: 10pt; color: #94a3b8; }
+.sidebar h3 { font-size: 9pt; color: #fff; text-transform: uppercase; letter-spacing: 1.5px; margin: 16px 0 8px; border-bottom: 1px solid #334155; padding-bottom: 4px; }
+.contact p { font-size: 9pt; margin: 2px 0; color: #cbd5e1; }
+.contact a { color: #60a5fa; text-decoration: none; }
+.skill-tag { display: inline-block; background: #334155; color: #e2e8f0; padding: 2px 8px; border-radius: 3px; font-size: 8pt; margin: 2px; }
+.proficiency { color: #94a3b8; font-size: 8pt; }
+.content { width: 66%; padding: 28px 24px; }
+.content h2 { font-size: 11pt; color: #1e293b; border-bottom: 2px solid #2563eb; padding-bottom: 3px; margin: 0 0 12px 0; text-transform: uppercase; letter-spacing: 0.5px; }
+.content section { margin-bottom: 20px; }
+.experience-item { margin-bottom: 16px; }
+.exp-header { margin-bottom: 4px; font-size: 10.5pt; }
+.company { color: #2563eb; }
+.date { float: right; color: #64748b; font-size: 9pt; font-weight: normal; }
+.content p { margin: 2px 0; font-size: 9.5pt; }
+.content ul { margin: 4px 0; padding-left: 18px; }
+.content li { margin-bottom: 2px; font-size: 9.5pt; }
+.institution { color: #64748b; font-size: 9pt; }
+.education-item { margin-bottom: 10px; }

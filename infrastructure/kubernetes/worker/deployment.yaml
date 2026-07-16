@@ -1,0 +1,77 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: resume-worker
+  namespace: resume-builder
+  labels:
+    app: resume-worker
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: resume-worker
+  template:
+    metadata:
+      labels:
+        app: resume-worker
+    spec:
+      containers:
+        - name: worker
+          image: resume-builder/worker:latest
+          env:
+            - name: DATABASE_URL
+              valueFrom:
+                secretKeyRef:
+                  name: db-connection
+                  key: async-url
+            - name: REDIS_URL
+              valueFrom:
+                secretKeyRef:
+                  name: redis-connection
+                  key: url
+            - name: CELERY_BROKER_URL
+              valueFrom:
+                secretKeyRef:
+                  name: redis-connection
+                  key: broker-url
+            - name: CELERY_RESULT_BACKEND
+              valueFrom:
+                secretKeyRef:
+                  name: redis-connection
+                  key: result-url
+            - name: SECRET_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: app-secrets
+                  key: secret-key
+            - name: GEMINI_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: app-secrets
+                  key: gemini-api-key
+            - name: STORAGE_BACKEND
+              value: "s3"
+            - name: S3_ENDPOINT
+              valueFrom:
+                secretKeyRef:
+                  name: storage-config
+                  key: endpoint
+            - name: S3_ACCESS_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: storage-config
+                  key: access-key
+            - name: S3_SECRET_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: storage-config
+                  key: secret-key
+            - name: S3_BUCKET
+              value: "resume-exports"
+          resources:
+            requests:
+              memory: "512Mi"
+              cpu: "500m"
+            limits:
+              memory: "1Gi"
+              cpu: "1000m"

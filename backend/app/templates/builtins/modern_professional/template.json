@@ -1,0 +1,14 @@
+{
+  "name": "Modern Professional",
+  "version": "1.0.0",
+  "author": "Resume Builder",
+  "description": "Two-column modern design with sidebar for skills and contact information",
+  "supportedSections": [
+    "personalInformation", "summary", "experience", "education",
+    "skills", "certifications", "projects", "languages"
+  ],
+  "pageSize": "A4",
+  "fonts": ["Inter", "Segoe UI", "Arial"],
+  "variables": {},
+  "category": "modern"
+}
